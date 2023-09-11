@@ -1,0 +1,29 @@
+@import '../../variables.scss';
+
+.flank-thin-template {
+    width: 30rem;
+    margin: 0 auto;
+    padding: 8em 2em 0em 2em;
+    display: flex;
+    flex-direction: column;
+
+    .logo {
+        width: 85px;
+
+        .leaf {
+            fill: $flank-green;
+        }
+    }
+
+    .instruction {
+        font-size: 1.5rem;
+        padding: 1rem 0 1rem 0;
+    }
+}
+
+@media (max-width: $phone-breakpoint) {
+    .flank-thin-template {
+        width: 100%;
+        padding: 4em 2em 4em 2em;
+    }
+}

@@ -1,0 +1,197 @@
+//text land
+$font-family: 'Roboto', monotype-grotesque, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI',
+    Roboto, 'Helvetica Neue', Arial, 'Noto Sans', sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol',
+    'Noto Color Emoji';
+$base-font-size: 1rem;
+$regular-font-size: 1rem;
+$small-font-size: 14px;
+$subtitle-text: 10px;
+$title-font-size: 24px;
+
+$mobile-paragaph-font-size: 0.8rem;
+$tight-font-spacing: -0.05rem;
+$text-color: #111;
+$flank-gray-text: #7b7b7f;
+$flank-negative-text: #a50f0d;
+$flank-positive-text: #1f793c;
+$standard-font-weight: 500;
+$para-line-height: 1.5;
+
+$large-font-size: 1.25rem;
+$xlarge-font-size: 1.5rem;
+
+//borders backgrounds and pills
+$border-radius: 6px;
+$border-radius-chart: 6px;
+$pill-background-negative: #fbe7e5;
+$pill-background-positive: #e0f7e6;
+$input-background-color: #fff;
+$input-border-color: #ccc;
+$flank-border-color: #dadada;
+$off-white-background-color: #fbfbfb;
+$text-background-color: #f4f9f9;
+
+$white-color: #fff;
+
+$flank-green: #00cd00;
+
+$flank-green-bg: #00cd00;
+$flank-green-bg-hover: lighten($flank-green, 2%);
+$flank-green-bg-active: darken($flank-green, 5%);
+
+$flank-gray-bg: #757575;
+$flank-gray-bg-hover: lighten($flank-gray-bg, 2%);
+$flank-gray-bg-active: darken($flank-gray-bg, 5%);
+
+$flank-green-bg-light: #e5f9e6;
+$flank-green-bg-dark: #004f07;
+
+$danger-color: #ff4136;
+$danger-color-light: lighten($danger-color, 10%);
+$danger-color-dark: darken($danger-color, 10%);
+$danger-color-bg: lighten($danger-color, 30%);
+
+$warning-color: #ff851b;
+$warning-color-light: lighten($warning-color, 10%);
+$warning-color-dark: darken($warning-color, 10%);
+$warning-color-bg: lighten($warning-color, 30%);
+
+$success-color: #00a65a;
+$success-color-light: lighten($success-color, 10%);
+$success-color-dark: darken($success-color, 10%);
+$success-color-bg: lighten($success-color, 30%);
+
+$info-color: #2196f3;
+$info-color-light: lighten($info-color, 10%);
+$info-color-dark: darken($info-color, 10%);
+$info-color-bg: lighten($info-color, 30%);
+
+$gray-color: #e5e7eb;
+$light-gray-color: #f3f4f6;
+$dark-gray-color: #4b5563;
+$gray-text-color: #536471;
+$disabled: $dark-gray-color;
+
+$black-color: #020617;
+$light-black-color: #1e293b;
+
+$positive-value-color: #2e9b4c;
+$negative-value-color: #ec3336;
+
+$small-border-radius: 0.25rem;
+$medium-border-radius: 0.5rem;
+$large-border-radius: 1rem;
+$xlarge-border-radius: 5rem;
+
+$small-gap: 0.5rem;
+$medium-gap: 1rem;
+$large-gap: 2rem;
+$xlarge-gap: 3rem;
+$xxlarge-gap: 5rem;
+
+$xsmall-padding: 0.25rem;
+$small-padding: 0.5rem;
+$xmedium-padding: 0.75rem;
+$medium-padding: 1rem;
+$large-padding: 2rem;
+$xlarge-padding: 3rem;
+$xxlarge-padding: 4rem;
+
+$xsmall-margin: $xsmall-padding;
+$small-margin: $small-padding;
+$medium-margin: $medium-padding;
+$large-margin: $large-padding;
+$xlarge-margin: $xlarge-padding;
+$xxlarge-margin: $xxlarge-padding;
+
+$width-full: 100%;
+$width-half: 50%;
+$width-third: 33.333333%;
+$width-quarter: 25%;
+$width-fifth: 20%;
+$width-sixth: 16.666667%;
+$width-seventh: 14.285714%;
+$width-eighth: 12.5%;
+$width-ninth: 11.111111%;
+$width-tenth: 10%;
+$width-eleventh: 9.090909%;
+$width-twelfth: 8.333333%;
+
+$width-screen: 100vw;
+$height-screen: 100vh;
+
+//sizes
+$desktop-breakpoint: 1390px;
+$tablet-breakpoint: 1120px;
+$phone-breakpoint: 1120px;
+
+// chart-land
+$bar-chart-left-padding: 2rem;
+$bar-chart-right-padding: 1 rem;
+$max-chart-image-size: 1.5rem;
+$max-chart-image-size-mobile: 1.2rem;
+$barchart-green: #95e4aa;
+$barchart-red: #e37d80;
+
+$transition-shape: cubic-bezier(0.4, 0, 0.2, 1);
+$transition-speed-fast: 0.15s;
+$transition-speed-obj-moving: 0.4s;
+
+$hover-background: background-color $transition-speed-fast $transition-shape;
+
+@mixin random-border() {
+    border: 1px solid rgb(random(255), random(255), random(255));
+}
+
+@mixin fade-in-hidden() {
+    opacity: 0;
+    transition: opacity 0.2s ease-in-out;
+}
+
+@mixin fade-in-visible() {
+    opacity: 1;
+    transition: opacity 0.2s ease-in-out;
+}
+
+@mixin grow-height-in-hidden() {
+    position: absolute;
+    max-height: 0;
+    overflow: hidden;
+    padding-top: 0;
+    padding-bottom: 0;
+}
+
+@mixin grow-height-in-visible($max-height: 300px) {
+    max-height: $max-height;
+    transition: max-height 0.2s ease-in-out 0s, padding-top 0.1s ease-in-out, padding-bottom 0.1s ease-in-out;
+    overflow: hidden;
+}
+
+$debug-border: 1px solid red;
+
+@mixin debug-border() {
+    border: $debug-border;
+
+    * {
+        border: $debug-border;
+
+        * {
+            border: $debug-border;
+        }
+    }
+}
+
+@mixin title-font {
+    font-family: 'Roboto', sans-serif;
+    font-weight: 700;
+    font-size: $title-font-size;
+    line-height: 1.2;
+    color: $black-color;
+    text-transform: uppercase;
+}
+
+@keyframes fadeInAnimation {
+    from {
+        opacity: 0;
+    }
+}
