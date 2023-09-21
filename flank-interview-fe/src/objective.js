@@ -1,21 +1,21 @@
 const objective = `
 ## Objective
-in \`src/components/CompanySizeFilters/company-size-filters.js\`:
 
-\`\`\`
-- Select a single item
+- Select a single item by adding it to the selected state, and applying CSS to indicate it is selected
 
-- Deselect an item
+- Deselect an item by removing it from the selected state, and removing the CSS
 
-- if "All" is selected, deselect all other items
+- if "All" is selected, deselect all other items and apply CSS to indicate it is selected
 
 - Select items in-between to create range.
-  e.g. >$100B is selected and $10B-50B is clicked, then $50B-100B should also be selected.
+  e.g. $100 is selected and $400 is clicked, then $200 and $300 should also be selected.
 
-- Selecting items in-between should work forwards and backwards
+- Selecting items in-between should work forwards and backwards.
+  e.g. $400 is selected and $100 is clicked, then $200 and $300 should also be selected.
 
-- Changing from Market Cap -> Book Value will clear all selections and select "All"
-\`\`\`
+- <div style="display: flex; align-items: center;">Style the buttons like <img src="../assets/button-example.png" /></div>
+
+- Turn the buttons and it's wrapper into a component that we can call using <FilterSelection />
 `;
 
 export default objective;

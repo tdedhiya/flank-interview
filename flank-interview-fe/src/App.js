@@ -1,34 +1,41 @@
 import { useState } from 'react';
 import './app.scss';
-import CompanySizeFilters from './components/CompanySizeFilters/company-size-filters';
 import ThinTemplate from './templates/ThinTemplate/thin-template';
-import { CompanySizeFilterBy } from './components/CompanySizeFilters/company-size-filters';
 import ReactMarkdown from 'react-markdown';
 import objective from './objective.js';
+import rehypeRaw from 'rehype-raw';
+
+const options = [
+    { value: null, label: 'All' },
+    { value: 100, label: '$100' },
+    { value: 200, label: '$200' },
+    { value: 300, label: '$300' },
+    { value: 400, label: '$400' },
+    { value: 500, label: '$500' },
+]
 
 function App() {
-    const [selectedFilters, setSelectedFilters] = useState({
-        companySize: {
-            field: CompanySizeFilterBy.MARKET_CAP,
-            values: [],
-        },
-    });
-
-    function updateSelectedFilters(key, value) {
-        setSelectedFilters((filters) => ({
-            ...filters,
-            [key]: value,
-        }));
-    }
+    const [selected, setSelected] = useState([]);
 
     return (
         <ThinTemplate instructionTitle="Front-end Interview">
-            <CompanySizeFilters
-                onChange={(field, values) => updateSelectedFilters('companySize', { field, values })}
-                companySize={selectedFilters.companySize}
-            />
+            <div class='options'>
+                {options.map((option) => (
+                    <button
+                        type='button'
+                        key={option.value}
+                    >
+                        {option.label}
+                    </button>
+                ))}
+            </div>
 
-            <ReactMarkdown className='markdown' children={objective} />
+            <ReactMarkdown rehypePlugins={[rehypeRaw]} className='markdown' children={objective} />
+
+            <h2>Selected State</h2>
+            <pre>
+                {JSON.stringify(selected, null, 2)}
+            </pre>
         </ThinTemplate>
     );
 }
