@@ -1,5 +1,7 @@
 # Flank Front-end Interview
 
+Fork this repo to add your solution, then email your fork to matt[at]theflank.io and david[at]theflank.io
+
 ## Objective
 in `src/components/CompanySizeFilters/company-size-filters.js`:
 
