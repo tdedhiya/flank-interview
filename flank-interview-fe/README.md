@@ -3,9 +3,6 @@
 Fork this repo to add your solution, then email your fork to matt[at]theflank.io and david[at]theflank.io
 
 ## Objective
-```
-## Objective
-
 - Select a single item by adding it to the selected state, and applying CSS to indicate it is selected
 
 - Deselect an item by removing it from the selected state, and removing the CSS
@@ -18,7 +15,6 @@ Fork this repo to add your solution, then email your fork to matt[at]theflank.io
 - Selecting items in-between should work forwards and backwards.
   e.g. $400 is selected and $100 is clicked, then $200 and $300 should also be selected.
 
-- <div style="display: flex; align-items: center;">Style the buttons like <img src="../assets/button-example.png" /></div>
+- Style the buttons like ![button-example](./public/assets/button-example.png)
 
-- Turn the buttons and it's wrapper into a component that we can call using <FilterSelection />
-```
+- Turn the buttons and it's wrapper into a component that we can call using `<FilterSelection />`
