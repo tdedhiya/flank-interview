@@ -1,5 +1,36 @@
-.markdown {
-    code {
-        white-space: pre-wrap;
+.options {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 20px;
+
+  button {
+    padding: 10px 15px;
+    font-size: 16px;
+    background-color: #fff;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    cursor: pointer;
+
+    &:hover {
+      background-color: #f2f2f2;
     }
+
+    &.selected {
+      background-color: #00cd00;
+      color: #fff;
+      border-color: #00cd00;
+    }
+
+    &.selected.all {
+      background-color: #00cd00;
+      color: #fff;
+      border-color: #00cd00;
+    }
+
+    &.selected.bidirectional-range {
+      background-color: #aaffaa;
+      color: #000;
+      border-color: #aaffaa;
+    }
+  }
 }
